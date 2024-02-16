@@ -1,0 +1,89 @@
+// Быстрое подключение шрифтов
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-weight: $weight;
+		font-style: $style;
+
+		// font-display: block;
+		src: $src;
+	}
+}
+
+// Перевод из px в rem
+@function rem($size) {
+	@return calc($size / $fontSize) + rem;
+}
+
+// Перевод из px в vw
+@function vw($size) {
+	@return calc($size / $vw) + vw;
+}
+
+// Переменнные | _support
+$fontSize: 15;
+$vw: 1920;
+
+// Переменные | Глобальные
+$color1: #ff0000;
+
+
+// Fonts
+@include font-face('Comfortaa', '../fonts/Comfortaa/Comfortaa-Bold', 700, normal, ttf);
+@include font-face('Comfortaa', '../fonts/Comfortaa/Comfortaa-SemiBold', 600, normal, ttf);
+@include font-face('Comfortaa', '../fonts/Comfortaa/Comfortaa-Medium', 500, normal, ttf);
+@include font-face('Comfortaa', '../fonts/Comfortaa/Comfortaa-Regular', 400, normal, ttf);
+@include font-face('Comfortaa', '../fonts/Comfortaa/Comfortaa-Light', 300, normal, ttf);
+
+@include font-face('Monserrat', '../fonts/Monserrat/Monserrat-Regular', 400, normal, ttf);
+
+@include font-face('Steppe', '../fonts/Steppe/Steppe', 400, normal, ttf);
+
+// Vars
+$blue: #005FB7;
+$blue2: #2F80ED;
+$darkBlue: #002756;
+
+// Путь к спрайту для конкатенации
+$sprite: "../svg/dest/stack/sprite";
+
+// Mixins
+@mixin btn {
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	&:focus {
+		outline: none;
+	}
+}

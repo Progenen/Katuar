@@ -1,0 +1,114 @@
+.footer {
+    background-image: url('../images/backgrounds/footer/footer-bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 80px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+
+        &--left {
+        }
+
+        &--menu {
+        }
+
+        &--contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        column-gap: 10px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba($color: #Fff, $alpha: .3);
+        max-width: 255px;
+        width: 100%;
+        margin-bottom: 20px;
+        svg {
+            width: 65px;
+            height: 65px;
+            fill: #fff;
+        }
+
+        span {
+            font-size: 32px;
+        }
+    }
+
+    &__logo-caption {
+        display: none;
+    }
+
+    &__menu-title {
+        font-size: 16px;
+        color: $blue;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    &__menu-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        li a {
+            color: #fff;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__phone {
+        font-size: 16px;
+    }
+
+    &__mail {
+        font-size: 16px;
+    }
+
+    &__socials {
+    }
+
+    &__socials-item {
+    }
+
+    &__socials-link {
+    }
+
+    &__call {
+        max-width: 255px;
+        width: 255px;
+        font-size: 14px;
+    }
+    
+    &__bottom {
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 40px 0;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

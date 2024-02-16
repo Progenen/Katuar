@@ -1,0 +1,91 @@
+.header {
+    padding: 30px 0 25px;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    &__row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__col {    
+
+        &--logo {
+        }
+
+        &--other {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 28px;
+        line-height: 110%;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__logo svg {
+        width: 65px;
+        height: 65px;
+        fill: #fff;
+    }
+
+    &__menu {
+    }
+
+    &__menu-list {
+        display: flex;
+        gap: 35px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__menu-item {
+        
+    }
+
+    &__menu-link {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+        padding-bottom: 3px;
+        font-weight: 400;
+    }
+
+    &__menu-link:hover {
+        border-color: $blue;
+    }
+
+    &__ui {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__phone {
+    }
+
+    &__phone-icon {
+    }
+
+    &__call {
+        min-width: 200px;
+    }
+
+    &__call-mob {
+        display: none;
+    }
+
+    &__burger {
+    }
+}
