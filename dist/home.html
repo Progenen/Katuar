@@ -41,7 +41,7 @@
                                     8 800 123 45 67
                                 </span>
                             </a>
-                            <a href="#" class="header__call call">
+                            <a href="#modalForm" class="header__call call modal-form__open">
                                 заказать звонок
                             </a>
                             <a href="#" class="header__call-mob">
@@ -869,6 +869,38 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal-form mfp-hide white-popup-block" id="modalForm">
+    <button class="modal-form__close">
+        <svg>
+            <use xlink:href='svg/dest/stack/spriteMono.svg#close'></use>
+        </svg>
+    </button>
+    <h2 class="modal-form__title">
+        Заказать звонок
+    </h2>
+    <form class="modal-form__form" action="#">
+        <input class="modal-form__form-input input" type="text" name="name" placeholder="Ваше имя" required>
+        <input class="modal-form__form-input input" type="tel" name="phone" placeholder="Номер телефона" required>
+        <button class="modal-form__form-btn btn btn--yellow">
+            <span>оставить заявку</span>
+        </button>
+
+        <div class="modal-form__form-checkbox checkbox">
+            <div class="modal-form__form-checkbox-input checkbox__input">
+                <input type="checkbox" name="politics" id="politics" required>
+                <span class="checkbox checkbox__custom">
+                    <svg>
+                        <use xlink:href='svg/dest/stack/spriteMono.svg#tick'></use>
+                    </svg>
+                </span>
+            </div>
+            <label for="politics">
+                Нажимая кнопку, вы соглашаетесь с условиями 
+                <a href="#">обработки персональных данных</a>
+            </label>
+        </div>
+    </form>
 </div>
 </body>
 <script src="JS/jquery-3.7.1.min.js"></script>

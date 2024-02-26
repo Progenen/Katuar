@@ -10,6 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuSub = document.querySelector(".menu__sub");
     const menuBtn = document.querySelector(".burger");
 
+    $('.modal-form__open').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        focus: '#username',
+        modal: true
+    });
+    
+    $.magnificPopup.close();
+    $(document).on('click', '.modal-form__close', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    });
+
     menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active");
         menu.classList.toggle("active");

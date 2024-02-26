@@ -27,6 +27,7 @@
     &__logo {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         text-decoration: none;
         color: #fff;
         column-gap: 10px;
@@ -38,7 +39,8 @@
         svg {
             width: 65px;
             height: 65px;
-            fill: #fff;
+            fill: #005FB7;
+            margin-left: -7px;
         }
 
         span {
@@ -47,7 +49,9 @@
     }
 
     &__logo-caption {
-        display: none;
+        font-size: 15px;
+        font-weight: 400;
+        width: 100%;
     }
 
     &__menu-title {
