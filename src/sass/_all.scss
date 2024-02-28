@@ -496,14 +496,19 @@ a {
     }
 }
 
+.title-h2 + .descr {
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
 .descr {
     font-size: 15px;
     font-weight: 300;
     padding: 0;
+}
 
-    ~ h2 {
-        margin-bottom: 30px;
-    }
+.text-blue {
+    color: #2F80ED !important;
 }
 
 .quote {

@@ -246,6 +246,14 @@
         img {
             opacity: .5;
         }
+
+        &__title--big {
+            font-size: 54px;
+        }
+
+        &__title + &__btn {
+            margin-top: 30px;
+        }
     }
 
     // info 993
@@ -703,6 +711,11 @@
 
     .title-h2 {
         font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .title-h2 + .descr {
+        margin-top: 0;
         margin-bottom: 30px;
     }
 
@@ -1856,6 +1869,21 @@
         &__title {
             margin-top: 0;
             font-size: 28px;
+            &--big {
+                font-size: 28px;
+            }
+        }
+
+        &__title + &__btn {
+            margin-top: 20px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__img-mob {
+            display: block;
         }
 
         p {
