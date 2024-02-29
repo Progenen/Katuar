@@ -1010,6 +1010,7 @@
 
     &__items {
         display: flex;
+        justify-content: space-between;
     }
 
     &__item {
@@ -1166,7 +1167,7 @@
         border-radius: 30px;
         color: $darkBlue;
         height: 100%;
-        min-height: 360px;
+        min-height: 340px;
     }
 
     &__item-title {
@@ -1207,6 +1208,7 @@
 }
 
 .contacts {
+    background-image: url("../images/backgrounds/contacts/contatcts-bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
