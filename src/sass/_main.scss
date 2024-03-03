@@ -688,13 +688,17 @@
 
     &__title span {
         color: #005FB7;
-        display: block;
     }
 
     &__descr {
         font-size: 20px;
         font-weight: 400;
         line-height: 150%;
+    }
+
+    p strong {
+        font-size: 15px;
+        line-height: 160%;
     }
 
     &__btn {
@@ -958,7 +962,6 @@
         margin-top: 20px;
         position: relative;
         display: flex;
-        align-items: center;
         padding-left: 57px;
         padding-top: 8px;
         padding-bottom: 8px;
@@ -971,6 +974,7 @@
         display: block;
         position: absolute;
         left: -20px;
+        top: -20px;
         width: 80px;
         height: 80px;
         background-image: url($sprite + 'Multi.svg#mark');
@@ -1540,6 +1544,7 @@
 
     &__btn {
         max-width: 410px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         &--whatsapp {
@@ -1572,6 +1577,16 @@
 
     &__items {
         row-gap: 40px;
+    }
+
+    &__items--icons {
+        .depends-reab__item-inner {
+            height: 300px;
+        }
+
+        .depends-reab__item-content {
+            max-width: 330px;
+        }
     }
 
     &__item {
@@ -1610,7 +1625,7 @@
         align-items: center;
         justify-content: center;
         min-height: 180px;
-            border-radius: 30px;
+        border-radius: 30px;
         span {
         }
 

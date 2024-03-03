@@ -1121,6 +1121,12 @@
             row-gap: 20px;
         }
 
+        &__items--icons {
+            .depends-reab__item-inner {
+                height: auto;
+            }
+        }
+
         &__item-inner {
             max-width: 420px;
             width: 100%;
