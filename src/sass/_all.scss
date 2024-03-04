@@ -81,6 +81,10 @@ p {
     line-height: 160%;
 }
 
+.descr + .descr {
+    margin-top: -20px;
+}
+
 .text-semi { 
     font-size: 15px;
     font-weight: 600;

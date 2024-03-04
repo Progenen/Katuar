@@ -735,6 +735,9 @@
         &--big {
             font-size: 62px;
         }
+        &--sm {
+            font-size: 50px;
+        }
     }
 
     &__img-mob {
@@ -1278,10 +1281,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    &__title {
-        margin-bottom: 30px;
-        text-align: center;
-    }
 
     &__items {
         margin-top: 58px;
@@ -1292,9 +1291,8 @@
     &__item {
     }
 
-    &__descr {
+    .descr {
         text-align: center;
-        max-width: 1020px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1333,10 +1331,6 @@
         filter: blur(200px);
         top: 20px;
         left: 255px;
-    }
-
-    &__title {
-        margin-bottom: 30px;
     }
 
     &__descr {
@@ -1589,6 +1583,25 @@
         }
     }
 
+    &__items--noicons {
+
+        .depends-reab__item-content {
+            max-width: 350px;
+            padding-left: 0;
+            padding-right: 0;
+            width: fit-content;
+            flex: 1 0 auto;
+            span {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 290px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
     &__item {
         &:nth-child(4n + 1) .depends-reab__item-inner {
             background-image: url("../images/graphics/depends-read/depends-reab__item.webp");
@@ -1661,19 +1674,6 @@
         position: relative;
 
         &:not(svg) {
-            padding-left: 0;
-            padding-right: 0;
-            width: fit-content;
-            max-width: 290px;
-            flex: 1 0 auto;
-            span {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 250px;
-                width: 100%;
-                text-align: center;
-            }
         }
 
         svg {
