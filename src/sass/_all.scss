@@ -70,15 +70,16 @@ p {
     padding: 0 20px;
 }
 
+
+.descr {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0;
+}
 .text-bold, p strong {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%;
-}
-
-.descr {
-    font-size: 15px;
-    line-height: 160%;
 }
 
 .descr + .descr {
@@ -503,12 +504,6 @@ a {
 .title-h2 + .descr {
     margin-top: -20px;
     margin-bottom: 50px;
-}
-
-.descr {
-    font-size: 15px;
-    font-weight: 300;
-    padding: 0;
 }
 
 .text-blue {
