@@ -654,6 +654,7 @@
         position: absolute;
         width: 945px;
         height: 100%;
+        min-height: 552px;
         top: 0;
         left: 0;
         z-index: -1;
@@ -1888,14 +1889,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 20px;
     &__title {
+        margin-top: 10px;
     }
 
     &__text {
         text-align: center;
         max-width: 786px;
         width: 100%;
-        margin-top: 333px;
+        margin-top: 383px;
     }
 
     &__img-mob {
