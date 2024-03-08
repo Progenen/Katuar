@@ -650,13 +650,18 @@
 
 .call-section {
     position: relative;
-    img {
+    &__img {
         position: absolute;
         width: 945px;
         height: 100%;
         top: 0;
         left: 0;
         z-index: -1;
+    }
+
+    &__img-mob {
+        display: none;
+        position: absolute;
     }
 
     .col-lg-6 img {
@@ -1580,6 +1585,11 @@
 
         .depends-reab__item-content {
             max-width: 330px;
+            padding-left: 0;
+            span {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 
@@ -1851,18 +1861,26 @@
     }
 
     &__content-inner {
-        padding-top: 68px;
+        min-height: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding-right: 64px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         padding-left: 476px;
-        padding-bottom: 60px;
     }
 
     &__title {
         text-align: left;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         span {
             color: #2F80ED;
         }
+    }
+    
+    .btn {
+        margin-top: 30px;
     }
 }
 

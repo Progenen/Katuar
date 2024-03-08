@@ -226,7 +226,7 @@
     .call-section {
         padding-top: 520px;
     
-        img {
+        &__img {
             top: 80px;
             height: 520px;
         }
@@ -1253,7 +1253,6 @@
 
     // clock 768
     .clock {
-
         &__content {
             background: var(--Linear, linear-gradient(308deg, #0068E2 1.97%, #00479A 30.59%, #001C3F 80.31%));
         }
@@ -1265,6 +1264,10 @@
         &__title {
             text-align: center;
             margin-bottom: 25px;
+        }
+
+        .btn {
+            margin-top: 20px;
         }
     }
 
@@ -1836,11 +1839,16 @@
         }
     }
 
-    // call-section
+    // call-section 576
     .call-section {
-        padding-top: 310px;
-        img {
-            top: 60px;
+        padding-top: 250px;
+        &__img {
+            display: none;
+        }
+
+        &__img-mob {
+            display: block;
+            top: 0;
             width: 320px;
             height: 220px;
             left: 50%;

@@ -474,6 +474,10 @@ a {
     span {
         color: $blue;
     }
+
+    &--sm {
+        font-size: 30px;
+    }
 }
 
 .title-h2--quote {
