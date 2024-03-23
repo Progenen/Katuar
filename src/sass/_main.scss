@@ -1864,6 +1864,17 @@
     &__content-bg {
     }
 
+    &--left {
+        .clock__content-inner {
+            padding-right: 480px;
+            padding-left: 50px;
+        }
+        
+        .btn {
+            max-width: 360px;
+            width: 100%;
+        }
+    }
     &__content-inner {
         min-height: 360px;
         display: flex;
@@ -1884,6 +1895,8 @@
     }
     
     .btn {
+        max-width: 300px;
+        width: 100%;
         margin-top: 30px;
     }
 }
@@ -1938,6 +1951,15 @@
     }
 
     &__descr {
+        text-align: center;
+        margin-bottom: 60px;
+        line-height: 160%;
+        strong {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 24px */
+        }
     }
 
     &__items {
