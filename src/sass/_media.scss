@@ -263,6 +263,13 @@
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 30px;
+            max-width: 320px;
+        }
+
+        &__image-circle {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
         }
     }
 
@@ -717,9 +724,17 @@
         margin-bottom: 30px;
     }
 
+    .subtitle {
+        font-size: 20px;
+    }
+
     .title-h2 + .descr {
         margin-top: 0;
         margin-bottom: 30px;
+    }
+
+    .descr br {
+        display: none;
     }
 
     .title-h2--quote {
@@ -1418,9 +1433,16 @@
     }
 
     // motivation-h 768
-    .motivation-h__content {
-        
-        background: linear-gradient(347deg, #0068E2 17.83%, #00479A 40.53%, #001C3F 84.28%);
+    .motivation-h {
+
+        &--left .motivation-h__content-inner {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__content {
+            background: linear-gradient(347deg, #0068E2 17.83%, #00479A 40.53%, #001C3F 84.28%);
+        }
     }
 
     // depends-h-side 768
@@ -1686,6 +1708,13 @@
 
     .title-h2 {
         font-size: 24px;
+        br {
+            display: none;
+        }
+    }
+
+    .subtitle {
+        font-size: 18px;
         br {
             display: none;
         }
@@ -1981,8 +2010,12 @@
             border: none;
             padding: 0;
             font-size: 13px;
-            margin-bottom: 20px;
         }
+
+        p + p {
+            margin-top: 20px;
+        }
+
     }
 
     // programs 576
@@ -2068,10 +2101,6 @@
             align-items: flex-start;
         }
 
-        ul li::before {
-            margin-top: -20px;
-        }
-
         p strong {
             font-weight: 300;
             display: inline;
@@ -2094,6 +2123,10 @@
 
         .col-lg-12 .programs__item {
             margin-top: 0;
+        }
+
+        &__subtitle1 {
+            font-size: 16px;
         }
     }
 
@@ -2448,8 +2481,11 @@
     // number 576
     .numbers {
 
+        .title-h2 + .descr {
+            margin-bottom: 0;
+        }
+
         &__items {
-            margin-bottom: 30px;
         }
 
         &__item-inner {
@@ -2469,6 +2505,10 @@
                 margin-top: 20px;
                 font-size: 16px;
             }
+        }
+
+        &__btn {
+            margin-top: 30px;
         }
     }
 
