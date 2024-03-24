@@ -653,9 +653,8 @@
     &__img {
         position: absolute;
         width: 945px;
-        height: 100%;
-        min-height: 552px;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: 0;
         z-index: -1;
     }
@@ -827,6 +826,28 @@
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 30px;
+    }
+
+    &__image-circle {
+        position: relative;
+        width: fit-content;
+    }
+
+    &__image-circle img {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__image-circle .circle {
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        background: var(--blue, #005FB7);
+        filter: blur(100px);
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -1557,12 +1578,30 @@
 
 .consultation {
 
+    .container {
+        position: relative;
+    }
+
     &__ui {
     }
 
     &__btn {
 
         &--whatsapp {
+        }
+    }
+
+    &__circle {
+        width: 300px;
+        height: 300px;
+        top: 0;
+        filter: blur(100px);
+        &--1 {
+            left: -64px;
+        }
+
+        &--2 {
+            right: -63px;
         }
     }
 }
