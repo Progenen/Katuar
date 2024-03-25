@@ -74,7 +74,12 @@ p {
 .descr {
     font-size: 15px;
     font-weight: 300;
+    margin-bottom: 50px;
     padding: 0;
+
+    &--sm {
+        font-size: 14px;
+    }
 }
 .text-bold, p strong {
     font-size: 16px;
@@ -460,6 +465,38 @@ a {
         border: 1px solid #fff;
         box-shadow: 0px 0px 30px 0px rgba(0, 100, 146, 0.50);
     }
+}
+
+.btn-whatsapp {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 340px;
+    width: 100%;
+    padding: 14px 0;
+    transition: .3s;
+    &:hover {
+        border-color: #73C025;
+        background-color: #73C025;
+        color:#fff;
+        svg {
+            fill: #fff;
+        }
+    }
+
+    svg {
+        
+        transition: .3s;
+        width: 30px;
+        height: 30px;
+        fill: #73C025;
+    }
+}
+
+p + p {
+    margin-top: 20px;
 }
 
 

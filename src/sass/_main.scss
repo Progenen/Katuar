@@ -346,6 +346,21 @@
             z-index: 0;
         }
     }
+
+    &__inner img {
+        
+        position: absolute;
+        display: block;
+        width: 540px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url('../images/backgrounds/consultation/consultation-bg.webp');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+    }
     
     &__title {
         border-radius: 0px 30px 30px 0px;
@@ -649,6 +664,7 @@
 }
 
 .call-section {
+    margin-top: 160px;
     position: relative;
     &__img {
         position: absolute;
@@ -745,6 +761,10 @@
         }
         &--sm {
             font-size: 50px;
+        }
+
+        &--smm {
+            font-size: 48px;
         }
     }
 
@@ -907,7 +927,7 @@
     
 
     &__item {
-        padding: 40px 30px;
+        padding: 40px 40px;
         background-color: #fff;
         position: relative;
         color: #000;
@@ -934,6 +954,44 @@
         &--icon2 svg {
             margin-top: -85px;
         }
+
+        &--wave {
+            background-image: url("../images/icons/programs-wave.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+
+    &__item ol, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item ol li {
+        margin-top: 20px;
+        padding-left: 20px;
+        list-style: none;
+        position: relative;
+        font-size: 14px;
+        line-height: 160%;
+        &::before {
+            content: counter(my-counter) ".";
+            counter-increment: my-counter;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p + li, p + ol {
+        margin-top: 20px;
     }
 
     &__item--split {
@@ -1028,6 +1086,33 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    
+    &__item ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: initial;
+        padding-left: 20px;
+    }
+    
+
+    &__item ul li {
+        display: list-item;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        position: relative;
+        font-size: 14px;
+        line-height: 160%;
+        &::before {
+            display: none;
+        }
+
+        span {
+            display: inline;
+        }
     }
 
     &--3 {
@@ -1919,6 +2004,21 @@
         border-radius: 30px;
         transform: translateY(21px) translateX(14px);
     }
+
+    &__ui {
+        display: flex;
+        column-gap: 30px;
+        margin-top: 70px;
+    }
+
+    &__btn {
+        max-width: 280px;
+
+        &--whatsapp {
+            max-width: 340px;
+            width: 100%;
+        }
+    }
 }
 
 .clock {
@@ -2297,6 +2397,10 @@
         }
     }
 
+    &__ui {
+        margin-top: -10px;
+    }
+
     &--left {
         .motivation-h__content-inner {
             padding-left: 60px;
@@ -2581,6 +2685,7 @@
         margin: 0;
         padding: 60px 30px 30px 60px;
         max-width: 535px;
+        height: 100%;
         &::before {
             display: none;
         }
@@ -2599,6 +2704,8 @@
 
         &--blue {
             margin-left: auto;
+            background-color: #005FB7;
+            color: #fff;
             &::after {
                 background-image: url($sprite + 'Multi.svg#plus-alt');
             }
@@ -2725,6 +2832,12 @@
         margin-top: 30px;
     }
 
+    &__title--sm {
+        margin-top: 30px;
+        font-size: 24px;
+        text-align: left;
+    }
+
     &__card {
         max-width: 542px;
         width: 100%;
@@ -2810,8 +2923,17 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    p.descr {
+        margin-top: 30px;
+    }
+
     h2 + p {
         text-align: center;
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-bottom: 30px;
     }
 
     &__items {
@@ -2936,7 +3058,6 @@ background: linear-gradient(180deg, #FFF -47.5%, #2277C5 71.87%);
 }
 
 .steps {
-
     &__items {
         position: relative;
         &::after {
@@ -3305,7 +3426,6 @@ background: linear-gradient(180deg, #FFF -47.5%, #2277C5 71.87%);
 .help {
 
     &__items {
-        background-image: url('../images/graphics/help/help-img.webp');
         background-size: 500px 500px;
         background-repeat: no-repeat;
         background-position: center top;
@@ -3391,6 +3511,10 @@ background: linear-gradient(180deg, #FFF -47.5%, #2277C5 71.87%);
             height: 21px;
         }
     }
+
+    &__text {
+        margin-top: 50px;
+    }
 }
 
 .advantages-h-big {
@@ -3437,5 +3561,9 @@ background: linear-gradient(180deg, #FFF -47.5%, #2277C5 71.87%);
             font-weight: 300;
             line-height: 160%; /* 20.8px */
         }
+    }
+
+    &__row-text {
+        margin-top: 50px;
     }
 }

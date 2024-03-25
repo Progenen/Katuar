@@ -448,6 +448,10 @@
         &__content-inner {
             padding-left: 60px;
         }
+
+        &__title--sm {
+            font-size: 22px;
+        }
     }
 
     // clock 993
@@ -851,6 +855,11 @@
         }
 
         &__inner::after {
+            opacity: .3;
+            background-size: cover;
+        }
+
+        &__inner img {
             opacity: .3;
             background-size: cover;
         }
@@ -1260,12 +1269,33 @@
                 margin-right: auto;
                 margin-top: 20px;
             }
+
+            &--sm {
+                margin-top: 20px;
+                font-size: 18px;
+            }
         }
 
         &__content-inner {
             text-align: center;
             display: flex;
             flex-direction: column;
+        }
+
+        &__ui {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            margin-top: 20px;
+        }
+
+        &__btn {
+            max-width: 100%;
+            width: 100%;
+            &--whatsapp {
+                max-width: 100%;
+                padding: 17.5px 21px;
+            }
         }
     }
 
@@ -1697,6 +1727,20 @@
         }
     }
 
+    
+
+    // contactsus 768
+    .contactus {
+        &__content {
+            
+            background: linear-gradient(169deg, #0068E2 14.92%, #00479A 38.97%, #001C3F 85.31%);
+        }
+
+        &__content-inner {
+            background: none;
+        }
+    }
+
 }
 
 @media (max-width:576px){
@@ -1837,6 +1881,17 @@
         }
 
         &__inner::after {
+            left: 0;
+            bottom: 0;
+            top: initial;
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+            opacity: 1;
+        }
+
+        &__inner img {
             left: 0;
             bottom: 0;
             top: initial;
@@ -2067,6 +2122,11 @@
             *:not(h3) {
                 padding: 0 20px;
             }
+        }
+
+        ol li {
+            font-size: 13px;
+            font-weight: 300;
         }
 
         &__item--i {
@@ -2406,6 +2466,10 @@
             width: 100%;
         }
 
+        &__title--sm {
+            font-size: 16px;
+        }
+
         &__content-inner p br{
             display: none;
         }
@@ -2743,6 +2807,10 @@
                 font-weight: 300;
                 line-height: 160%; /* 20.8px */
             }
+        }
+
+        &__row-text {
+            margin-top: 30px;
         }
     }
 
