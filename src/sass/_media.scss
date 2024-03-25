@@ -243,9 +243,6 @@
 
     // banner 993
     .banner {
-        img {
-            opacity: .5;
-        }
 
         &__title--big {
             font-size: 54px;
@@ -1999,20 +1996,20 @@
     // banner 576
     .banner {
         text-align: center;
-        background: none;
+        background: none !important;
         padding-bottom: 0;
         background-size: contain;
         .container {
             position: relative;
         }
+
+        .row {
+            padding-top: 0;
+        }
         
         img {
             height: 240px;
             width: 280px;
-            left: 50%;
-            transform: translateX(-50%) translateY(0);
-            top: 66px;
-            opacity: 1;
         }
 
         &__title {
@@ -2043,10 +2040,6 @@
         &__btn {
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .row {
-            padding-top: 260px;
         }
 
         .breadcrumbs {
