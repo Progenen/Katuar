@@ -70,15 +70,25 @@ p {
     padding: 0 20px;
 }
 
+
+.descr {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    padding: 0;
+
+    &--sm {
+        font-size: 14px;
+    }
+}
 .text-bold, p strong {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%;
 }
 
-.descr {
-    font-size: 15px;
-    line-height: 160%;
+.descr + .descr {
+    margin-top: -20px;
 }
 
 .text-semi { 
@@ -457,6 +467,38 @@ a {
     }
 }
 
+.btn-whatsapp {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 340px;
+    width: 100%;
+    padding: 14px 0;
+    transition: .3s;
+    &:hover {
+        border-color: #73C025;
+        background-color: #73C025;
+        color:#fff;
+        svg {
+            fill: #fff;
+        }
+    }
+
+    svg {
+        
+        transition: .3s;
+        width: 30px;
+        height: 30px;
+        fill: #73C025;
+    }
+}
+
+p + p {
+    margin-top: 20px;
+}
+
 
 .title-h2 {
     font-size: 36px;
@@ -469,6 +511,22 @@ a {
     span {
         color: $blue;
     }
+
+    &--sm {
+        font-size: 30px;
+    }
+}
+
+.title-h2 + .title-h3 {
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.title-h3 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
 }
 
 .title-h2--quote {
@@ -499,12 +557,6 @@ a {
 .title-h2 + .descr {
     margin-top: -20px;
     margin-bottom: 50px;
-}
-
-.descr {
-    font-size: 15px;
-    font-weight: 300;
-    padding: 0;
 }
 
 .text-blue {
